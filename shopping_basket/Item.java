@@ -3,10 +3,10 @@ package shopping_basket;
 public class Item {
 
     String type;
-    double price;
+    int price;
     boolean discount;
 
-    public Item(String type, double price, boolean discount){
+    public Item(String type, int price, boolean discount){
         this.type = type;
         this.price = price;
         this.discount = discount;
@@ -20,17 +20,21 @@ public class Item {
       this.type = type;
     }
     
-    public double getPrice(){
+    public int getPrice(){
         return this.price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(int price) {
         this.price = price;
       }
 
     public boolean hasDiscount() {
       return this.discount;
     }
+
+    public void setDiscount(boolean discount) {
+        this.discount = discount;
+      }
 
 
 
