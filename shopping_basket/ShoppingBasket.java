@@ -5,9 +5,13 @@ import java.util.ArrayList;
 public class ShoppingBasket {
 
   public ArrayList<Item> items;
+  public double total;
+
 
   public ShoppingBasket() {
     this.items = new ArrayList<Item>();
+    this.total = 0;
+
   }
 
   public int itemsTotalNumber(){
@@ -25,7 +29,14 @@ public class ShoppingBasket {
   public void canEmptyShoppingBag(){
     items.clear();
     }
-  
+
+  public double getValue() {
+    double total = 0;   
+    for (Item item : items){
+      total += item.getPrice();
+    }
+    return total;
+  }
 
 
 }
