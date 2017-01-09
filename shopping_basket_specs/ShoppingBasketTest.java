@@ -18,4 +18,14 @@ public class ShoppingBasketTest {
     shoppingBasket.addAnItemToShoppingBasket(item);
         assertEquals(1, shoppingBasket.itemsTotalNumber());
     }
+
+    @Test
+    public void shoppingBasketCanRemoveAnItem(){
+    Item item1 = new Item("Pen", 1.2);
+    Item item2 = new Item("Paper", 2.5);
+    shoppingBasket.addAnItemToShoppingBasket(item1);
+    shoppingBasket.addAnItemToShoppingBasket(item2);
+    shoppingBasket.removeAnItemFromShoppingBasket(item2);
+        assertEquals(1, shoppingBasket.itemsTotalNumber());
+    }
 }
