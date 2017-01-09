@@ -30,8 +30,8 @@ public class ShoppingBasket {
     items.clear();
     }
 
-  public double getValue() {
-    double total = 0;   
+  public int getValue() {
+    int total = 0;   
     for (Item item : items){
       total += item.getPrice();
     }
