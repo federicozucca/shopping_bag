@@ -10,17 +10,22 @@ public class ShoppingBasket {
     this.items = new ArrayList<Item>();
   }
 
-  public void addAnItemToShoppingBasket(Item item){
-      items.add(item);
-  }
-
-  public void removeAnItemFromShoppingBasket(Item item){
-      items.remove(item);
-  }
-
   public int itemsTotalNumber(){
       return items.size();
   }
+
+  public void addAnItemToShoppingBasket(Item item){
+    items.add(item);
+  }
+
+  public void removeAnItemFromShoppingBasket(Item item){
+    items.remove(item);
+  }
+
+  public void canEmptyShoppingBag(){
+    items.clear();
+    }
+  
 
 
 }
